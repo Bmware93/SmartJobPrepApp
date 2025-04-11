@@ -20,7 +20,7 @@ public partial class JobDbContext : DbContext
     public virtual DbSet<Question> Questions { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("DefaultConnection");
+        => optionsBuilder.UseSqlServer("Server=localhost,1433;Database=JobDB;User Id=sa;Password=SoftwareDev25!;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
