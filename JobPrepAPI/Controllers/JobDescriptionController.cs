@@ -158,7 +158,6 @@ namespace JobPrepAPI.Controllers
         {
             var client = _httpClientFactory.CreateClient();
             var apiKey = _config["ApiKey"];
-            Console.WriteLine("API Key: " + apiKey);
             client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", apiKey);
 
             var body = new
